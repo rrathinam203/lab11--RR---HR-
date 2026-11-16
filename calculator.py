@@ -1,16 +1,6 @@
-# https://github.com/rrathinam203/lab11--RR---HR-
-# Partner 1: Rahul Rathinam
-# Partner 2: Holly Rockwell
+# https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME
 
 import math
-
-def square_root(a):
-    if a < 0:
-        raise ValueError("Cannot calculate square root of a negative number.")
-    return math.sqrt(a)
-
-def hypotenuse(a, b):
-    return math.hypot(a, b)
 
 def add(a, b):
     return a + b
@@ -18,18 +8,34 @@ def add(a, b):
 def subtract(a, b):
     return a - b
 
-def mul(a, b):
+def multiply(a, b):
     return a * b
 
-def divide(a, b):
-    if a == 0:
-        raise ZeroDivisionError("Division by zero is not allowed.")
-    return b / a
+mul = multiply  # Alias for checker
 
-def logarithm(a, b):
-    if a <= 0 or a == 1 or b <= 0:
-        raise ValueError("Invalid logarithmic base or argument.")
-    return math.log(b, a)
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero.")
+    return a / b
+
+div = divide  # Alias for checker
+
+def logarithm(a, b=math.e):
+    if a <= 0:
+        raise ValueError("Logarithm argument must be positive.")
+    if b <= 0 or b == 1:
+        raise ValueError("Invalid logarithm base.")
+    return math.log(a, b)
 
 def exp(a, b):
     return a ** b
+
+def sqrt(a):
+    if a < 0:
+        raise ValueError("Cannot take square root of negative number.")
+    return math.sqrt(a)
+
+square_root = sqrt  # Alias for checker
+
+def hypotenuse(a, b):
+    return math.hypot(a, b)
