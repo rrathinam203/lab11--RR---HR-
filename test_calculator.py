@@ -32,7 +32,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.logarithm(100, 10), 2.0)
 
     def test_multiply(self):
-        self.assertEqual(calculator.multiply(3, 4), 12)
+        self.assertEqual(calculator.mul(3, 4), 12)
 
     def test_sqrt(self):
         self.assertEqual(calculator.square_root(16), 4.0)
