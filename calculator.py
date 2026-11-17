@@ -1,3 +1,7 @@
+# https://github.com/rrathinam203/lab11--RR---HR-
+# Partner 1: Rahul Rathinam
+# Partner 2: Holly Rockwell
+
 import math
 
 def add(a, b): 
