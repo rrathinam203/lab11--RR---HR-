@@ -1,4 +1,6 @@
-# https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME
+# https://github.com/rrathinam203/lab11--RR---HR-
+# Partner 1: Rahul Rathinam
+# Partner 2: Holly Rockwell
 
 import unittest
 import calculator
@@ -12,7 +14,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.divide(10, 2), 5)
 
     def test_divide_by_zero(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ZeroDivisionError):
             calculator.divide(10, 0)
 
     def test_hypotenuse(self):
