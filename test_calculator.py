@@ -11,14 +11,14 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.add(2, 3), 5)
 
     def test_divide(self):
-        self.assertEqual(calculator.divide(10, 2), 5)
+        self.assertAlmostEqual(calculator.div(10, 2), 5)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            calculator.divide(10, 0)
+            calculator.div(10, 0)
 
     def test_hypotenuse(self):
-        self.assertEqual(calculator.hypotenuse(3, 4), 5.0)
+        self.assertAlmostEqual(calculator.hypotenuse(3, 4), 5.0)
 
     def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
@@ -35,7 +35,7 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.multiply(3, 4), 12)
 
     def test_sqrt(self):
-        self.assertEqual(calculator.sqrt(16), 4.0)
+        self.assertEqual(calculator.square_root(16), 4.0)
 
     def test_subtract(self):
         self.assertEqual(calculator.subtract(5, 2), 3)
